@@ -10,6 +10,8 @@ namespace Snake_OOP
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello World");
+            Console.ReadLine();
         }
     }
 }
