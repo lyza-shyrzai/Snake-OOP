@@ -16,9 +16,11 @@ namespace Snake_OOP
             Point p2 = new Point(4, 6, '$');          
             p2.Draw();
 
-            HorizontalLine line = new HorizontalLine(5, 50, 10, '@');
+            HorizontalLine line = new HorizontalLine(5, 50, 11, '@');
             line.Drow();
 
+            VerticalLine Vline = new VerticalLine(2, 10, 7, 'W');
+            Vline.Drow();
 
             Console.ReadLine();
         }
