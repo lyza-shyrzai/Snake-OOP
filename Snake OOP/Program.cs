@@ -10,17 +10,23 @@ namespace Snake_OOP
     {
         static void Main(string[] args)
         {
+            Console.SetBufferSize(80, 25);
+
+            // Отрисовка рамочки
+            HorizontalLine upLine = new HorizontalLine(0, 78, 0, '+');
+            HorizontalLine downLine = new HorizontalLine(0, 78, 24, '+');
+            VerticalLine leftLine = new VerticalLine(0, 24, 0, '+');
+            VerticalLine rightLine = new VerticalLine(0, 24, 78, '+');
+            upLine.Drow();
+            downLine.Drow();
+            leftLine.Drow();
+            rightLine.Drow();
+
             Point p1 = new Point(1, 3, '*');
             p1.Draw();
 
             Point p2 = new Point(4, 6, '$');          
             p2.Draw();
-
-            HorizontalLine line = new HorizontalLine(5, 50, 11, '@');
-            line.Drow();
-
-            VerticalLine Vline = new VerticalLine(2, 10, 7, 'W');
-            Vline.Drow();
 
             Console.ReadLine();
         }
