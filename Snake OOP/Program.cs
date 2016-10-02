@@ -25,24 +25,13 @@ namespace Snake_OOP
            
 
             Point p = new Point(4, 6, '*');
-            Snake snake = new Snake(p, 5, Direction.DOWN);
+            Snake snake = new Snake(p, 5, Direction.RIGHT);
             snake.Draw();
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
+            for (int i = 0; i < 10; i++)
+            {
+                snake.Move();
+                Thread.Sleep(300);
+            }
 
             Console.ReadLine();
         }
