@@ -22,11 +22,11 @@ namespace Snake_OOP
             leftLine.Drow();
             rightLine.Drow();
 
-            Point p1 = new Point(1, 3, '*');
-            p1.Draw();
+           
 
-            Point p2 = new Point(4, 6, '$');          
-            p2.Draw();
+            Point p = new Point(4, 6, '*');
+            Snake snake = new Snake(p, 5, Direction.DOWN);
+            snake.Drow();
 
             Console.ReadLine();
         }
