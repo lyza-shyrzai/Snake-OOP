@@ -10,7 +10,7 @@ namespace Snake_OOP
     {
         protected List<Point> plist;
 
-        public void Drow()
+        public void Draw()
         {
             foreach (Point p in plist)
             {
