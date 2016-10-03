@@ -11,6 +11,10 @@ namespace Snake_OOP
         static void Main(string[] args)
         {
             Console.SetBufferSize(80, 25);
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("Нажмите enter, чтобы начать игру :)");
+            Console.ResetColor();
+            Console.ReadLine();
 
             // Отрисовка рамочки
             HorizontalLine upLine = new HorizontalLine(0, 78, 0, '+');
@@ -22,18 +26,36 @@ namespace Snake_OOP
             leftLine.Draw();
             rightLine.Draw();
 
-           
 
+            // Отрисовка точек
             Point p = new Point(4, 6, '*');
             Snake snake = new Snake(p, 5, Direction.RIGHT);
             snake.Draw();
-            for (int i = 0; i < 10; i++)
-            {
-                snake.Move();
-                Thread.Sleep(300);
-            }
 
-            Console.ReadLine();
+            FoodCreator foodCreator = new FoodCreator(80, 25, '$');
+            Point food = foodCreator.CreateFood();
+            food.Draw();
+
+            while (true)
+            {
+                if (snake.Eat(food))
+                {
+                    food = foodCreator.CreateFood();
+                    food.Draw();
+                }
+                else
+                {
+                    snake.Move();
+                }
+
+                Thread.Sleep(100);
+
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandleKey(key.Key);
+                }   
+            }
         }
     }
 }
