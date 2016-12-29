@@ -33,10 +33,7 @@ namespace Snake_OOP
             {
                 if(walls.IsHit(snake) || snake.IsHitTail() )
                 {
-                    Console.SetCursorPosition(14, 12);
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Вы проиграли :( . Нажмите enter, чтобы выйти из игры");
-                    Console.ReadLine();
+                    
                     break;
                 }
 
@@ -58,6 +55,16 @@ namespace Snake_OOP
                     snake.HandleKey(key.Key);
                 }   
             }
+            WriteGameOver();
+            Console.ReadLine();
+        }
+
+        static void WriteGameOver()
+        {
+            Console.SetCursorPosition(14, 12);
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Вы проиграли :( . Нажмите enter, чтобы выйти из игры");
         }
     }
+    
 }
