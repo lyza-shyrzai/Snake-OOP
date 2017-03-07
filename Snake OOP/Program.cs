@@ -12,7 +12,7 @@ namespace Snake_OOP
         {
             Console.SetBufferSize(80, 25);
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("Нажмите enter, чтобы начать игру :)");
+            Console.WriteLine("Press 'enter' to start the game :)");
             Console.ResetColor();
             Console.ReadLine();
 
@@ -61,9 +61,9 @@ namespace Snake_OOP
 
         static void WriteGameOver()
         {
-            Console.SetCursorPosition(14, 12);
+            Console.SetCursorPosition(17, 12);
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Вы проиграли :( . Нажмите enter, чтобы выйти из игры");
+            Console.WriteLine("You lose :( . Press 'enter' to quit the game.");
         }
     }
     
