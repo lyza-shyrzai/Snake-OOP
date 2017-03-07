@@ -9,3 +9,7 @@ The game consists of:
 1. Snake (created with the help of asterisks)
 2. Dollar sign (food for snake)
 3. Borders of the screen (cons)
+
+When the snake touches the dollar sign, it increases by one asterisk.
+
+If the snake touches the boundaries of the screen or with itself, the message about the end of the game appears.
